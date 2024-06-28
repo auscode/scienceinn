@@ -12,15 +12,27 @@
       background-color: black;
       color: white;
       font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body,
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 2em;
+    }
+
     .plat-links {
       display: flex;
       flex-direction: column;
       text-align: center;
       justify-content: center;
-      margin: 2em 14em;
+      width: 100%;
+      max-width: 800px;
+      padding: 0 1em;
     }
 
     a {
@@ -51,7 +63,7 @@
 
     .plat-body {
       background-color: #222222;
-      padding: 1em 5em;
+      padding: 1em;
       border-radius: 10px;
       align-items: center;
       cursor: pointer;
@@ -62,6 +74,55 @@
 
     .plat-body:hover {
       transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .plat-links {
+        margin: 1em;
+      }
+
+      .head-logo {
+        margin-bottom: 1em;
+      }
+
+      .head-img {
+        height: 5em;
+      }
+
+      .head-text {
+        font-size: 18px;
+      }
+
+      .plat-body {
+        font-size: medium;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        margin: 1em;
+      }
+
+      .plat-links {
+        margin: 0;
+      }
+
+      .head-logo {
+        margin-bottom: 1em;
+      }
+
+      .head-img {
+        height: 4em;
+      }
+
+      .head-text {
+        font-size: 16px;
+      }
+
+      .plat-body {
+        font-size: small;
+        padding: 0.5em;
+      }
     }
   </style>
 </head>
@@ -92,17 +153,6 @@
         Apple
       </div>
     </a>
-    <!-- <a href="https://www.yourblog.com" target="_blank">
-      <div class="plat-body">
-        Blog
-      </div>
-    </a> -->
-    <!-- <a href="https://www.facebook.com" target="_blank">
-      <div class="plat-body">
-        Facebook
-      </div>
-    </a> -->
-
   </div>
 </body>
 
